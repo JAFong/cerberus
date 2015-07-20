@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="../assets/style.css">
   </head>
-  <body ui-view>
+  <body ng-controller="HomeController">
     <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header"><a href="#" class="navbar-brand">Cerferus</a>
@@ -19,7 +19,7 @@
         <button class="btn btn-info">Icon</button>
       </form>
     </div>
-    <section ng-controller="GoogleMapController">
+    <section ui-view>
       <div map-lazy-load="http://maps.googleapis.com/maps/api/js?v=3&amp;sensor=false"><map center="36.958, -119.2658" zoom="6">
           <marker ng-repeat="beach in beachData" forecast="{{beach.forecastData}}" position="[{{beach.lat}}, {{beach.lon}}]" name="{{beach.beachname}}" tilt="45" map-type-id="SATELLITE" on-click="open()">   </marker>
           <!-- dummy static marker --></map></div>

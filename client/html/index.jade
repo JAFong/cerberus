@@ -4,7 +4,7 @@ html(lang="en" ng-app="app")
     title Gnar Swells, Brah
     link(rel="stylesheet" type="text/css" href="../lib/bootstrap/dist/css/bootstrap.css")
     link(rel="stylesheet" type="text/css" href="../assets/style.css")
-  body(ui-view)
+  body(ng-controller="HomeController")
     nav.navbar.navbar-inverse
       .container-fluid
         .navbar-header
@@ -19,7 +19,7 @@ html(lang="en" ng-app="app")
         input(placeholder="Search for a surf spot")
         button.btn.btn-info.
           Icon
-    section(ng-controller="GoogleMapController")
+    section(ui-view)
       include map
     //- Using include instead of extends
     //- block scripts

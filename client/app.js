@@ -13,7 +13,6 @@ var app = angular.module('app', [
   $stateProvider
   .state('home', {
     url: '/',
-    templateUrl: '../html/index.html',
-    controller: 'HomeController'
+    controller: 'GoogleMapController'
   });
 });
