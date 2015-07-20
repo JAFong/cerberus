@@ -5,6 +5,7 @@ var app = angular.module('app', [
   'app.mapService',
   'ui.router',
   'ui.bootstrap'
+  // 'ngMock'
 ])
 .config(function($urlRouterProvider, $stateProvider) {
   $urlRouterProvider.otherwise('/');
